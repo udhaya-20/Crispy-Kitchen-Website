@@ -14,7 +14,7 @@ pipeline {
 			success {
 				mail to: 'udhayakumarraman225@gmail.com',
          			subject: 'SUCCESS: Website deployed successfully',
-         			body: "The deployment was successfull'
+         			body: 'The deployment was successfull'
 			}
 			failure {
     				mail to: 'udhayakumarraman225@gmail.com',
