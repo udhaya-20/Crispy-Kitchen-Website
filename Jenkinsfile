@@ -4,7 +4,7 @@ pipeline {
 			stage ('deploy static wesite') {
 				steps {
 					sh '''
-						cp -r * /var/www/html
+						sudo cp -r * /var/www/html
 					'''
 					echo 'Your website deployed successfully...'
 				}
@@ -19,7 +19,7 @@ pipeline {
 			failure {
     				mail to: 'udhayakumarraman225@gmail.com',
          			subject: 'FAILURE: Website deployment failed',
-         			body: "The deployment failed. Please check the logs.\\nTo check your log status visit $BUILD_URL"
+         			body: "The deployment failed. Please check the logs.\nTo check your log status visit $BUILD_URL"
 			}
 		}
 	}
