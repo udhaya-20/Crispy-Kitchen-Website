@@ -12,12 +12,9 @@ pipeline {
 		}
 		post {
 			success {
-				script {
-					def ip = sh(script: "hostname -I | awk '{print $1}'", returnStdout: true).trim()
-					
-    					mail to: 'udhayakumarraman225@gmail.com',
-         				subject: 'SUCCESS: Website deployed successfully',
-         				body: "The website has been deployed successfully! You can view it at http://${ip}/"
+				mail to: 'udhayakumarraman225@gmail.com',
+         			subject: 'SUCCESS: Website deployed successfully',
+         			body: "The deployment was successfull'
 			}
 			failure {
     				mail to: 'udhayakumarraman225@gmail.com',
