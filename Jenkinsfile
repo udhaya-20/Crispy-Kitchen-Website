@@ -6,7 +6,7 @@ pipeline {
 					sh '''
 						cp -r * /var/www/html
 					'''
-					echo 'Your website deployed successfully...
+					echo 'Your website deployed successfully...'
 				}
 			}
 		}
