@@ -19,7 +19,7 @@ pipeline {
 			failure {
     				mail to: 'udhayakumarraman225@gmail.com',
          			subject: 'FAILURE: Website deployment failed',
-         			body: "The deployment failed. Please check the logs. \n To check your log status visit $BUILD_URL"
+         			body: "The deployment failed. Please check the logs. '\n'To check your log status visit $BUILD_URL"
 			}
 		}
 	}
