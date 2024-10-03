@@ -4,7 +4,6 @@ pipeline {
 			stage ('deploy static wesite') {
 				steps {
 					sh '''
-     						sudo chown -R jenkins /var/www/html
 						sudo cp -r * /var/www/html
 					'''
 					echo 'Your website deployed successfully...'
