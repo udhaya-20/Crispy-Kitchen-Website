@@ -4,7 +4,7 @@ pipeline {
 			stage ('deploy static wesite') {
 				steps {
 					sh '''
-						sudo cp -r * /var/www/html
+						cp -r * /var/www/html
 					'''
 					echo 'Your website deployed successfully...'
 				}
